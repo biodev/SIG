@@ -10,7 +10,7 @@ Workflows and code for the Systems Immunogenetics project
 
 ### Array QA/QC Workflow
 
-[Array QA/QC Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/mooneymi/systems_immunogenetics/blob/master/SIG_Array_QA_QC_Workflow.ipynb)
+[Array QA/QC Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_Array_QA_QC_Workflow.ipynb)
 
 
 ## QTL Mapping Analysis
