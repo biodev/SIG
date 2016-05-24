@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 # Jupyter Notebook checkpoint files
 *.ipynb_checkpoints
 
+# Data directory
+xdata/
+
 # =========================
 # Operating System Files
 # =========================
