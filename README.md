@@ -9,24 +9,24 @@ Workflows and code for the Systems Immunogenetics project
 
 ## <a name="pheno"></a>Phenotypic Data Cleaning 
 
-### Flow Cytometry
+#### Flow Cytometry
 
 [Flow Cytometry Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Cleaning.ipynb)
 
-### Histology Data
+#### Histology Data
 
 [Histology Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Histology_Data_Cleaning.ipynb)
 
-### qPCR Data Cleaning Workflow
+#### qPCR Data Cleaning Workflow
 
 
-### Buxco Data Cleaning Workflow
+#### Buxco Data Cleaning Workflow
 
 
 
 ## <a name="expression"></a>Expression Array Analysis
 
-### Array QA/QC Workflow
+#### Array QA/QC Workflow
 
 [Array QA/QC Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_Array_QA_QC_Workflow.ipynb)
 
@@ -38,10 +38,10 @@ Coming soon ...
 
 ## <a name="viz"></a>Data Visualizations
 
-### SIG Shiny Apps
+#### SIG Shiny Apps
 
 Coming soon ...
 
-### Data Visualization R code
+#### Data Visualization R code
 
-[Flow Cytometry Data Plots](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Plotting.ipynb)
+[Flow Cytometry Data Plots @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Plotting.ipynb)
