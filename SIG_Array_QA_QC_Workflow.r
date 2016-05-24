@@ -1,8 +1,9 @@
 
 ## Load libraries and functions for array processing and QA/QC plots
-source('array_qa_qc_functions.r')
+source('./scripts/array_qa_qc_functions.r')
 
 ## Read the annotation spreadsheet into R
+## You will have to change the directory path
 annot_dir = '/Users/mooneymi/Documents/MyDocuments/SystemsImmunogenetics/Expression/Bat_Virus_Array'
 setwd(annot_dir)
 sample_annot = read.xls('BatPlate_Annotation_editedMM.xlsx', header=T, as.is=T, na.strings=c(""," ", "NA", "#DIV/0!"))
