@@ -7,8 +7,6 @@ data_dir = "/Users/mooneymi/Documents/SIG/WNV/qPCR"
 ## Read in data (byLine)
 qpcr_data = read.xls(file.path(data_dir, "16-May-2016/Gale_qPCR_byLine_5-16-16 %282%29.xlsx"), sheet=1)
 
-#qpcr_data = read.xls(file.path(data_dir, "Gale_qPCR_byLine_5-16-16_MM_animalsRemoved.xlsx"), sheet=1)
-
 head(qpcr_data)
 dim(qpcr_data)
 
@@ -62,8 +60,6 @@ head(qpcr_data)
 
 ## Read in data (byMouse)
 qpcr_data_mouse = read.xls(file.path(data_dir, "16-May-2016/Gale_qPCR_byMouse_5-16-16 %281%29.xlsx"), sheet=1)
-
-#qpcr_data_mouse = read.xls(file.path(data_dir, "Gale_qPCR_byMouse_5-16-16_MM_animalsRemoved.xlsx"), sheet=1)
 
 head(qpcr_data_mouse)
 dim(qpcr_data_mouse)
@@ -401,8 +397,8 @@ dim(qpcr_bymouse_updated_cleaned)
 
 
 ## Save ByLine Data
-write.table(qpcr_data_final_format_order, file=file.path(data_dir, "23-May-2016/Gale_qPCR_byLine_5-23-16_MM_updated.txt"), 
+write.table(qpcr_byline_updated_cleaned, file=file.path(data_dir, "23-May-2016/Gale_qPCR_byLine_5-23-16_MM_updated.txt"), 
             col.names=T, row.names=F, sep='\t', quote=F, na="")
 ## Save ByMouse Data
-write.table(qpcr_data_mouse_order, file=file.path(data_dir, "23-May-2016/Gale_qPCR_byMouse_5-23-16_MM_updated.txt"), 
+write.table(qpcr_bymouse_updated_cleaned, file=file.path(data_dir, "23-May-2016/Gale_qPCR_byMouse_5-23-16_MM_updated.txt"), 
             col.names=T, row.names=F, sep='\t', quote=F, na="")
