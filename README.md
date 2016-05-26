@@ -17,10 +17,11 @@ Workflows and code for the Systems Immunogenetics project
 
 [Histology Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Histology_Data_Cleaning.ipynb)
 
-#### qPCR Data Cleaning Workflow
+#### qPCR Data
 
+[qPCR Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_qPCR_Data_Cleaning.ipynb)
 
-#### Buxco Data Cleaning Workflow
+#### Buxco Data
 
 
 
