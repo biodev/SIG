@@ -951,7 +951,7 @@ expandtomarkers: logical (default is TRUE)
 ignore_genetic_dist: logical (default is TRUE)
 "
 
-## Below is the same code from DOQTL, except perms are not automatically written to a text file
+## Below is the same code from DOQTL, except code for automatically writing results to a text file is commented out
 scanone.perm = function (pheno, pheno.col = 1, probs, addcovar, intcovar, snps, model = c("additive", "full"), path = ".", nperm = 1000, return.val = c("lod", "p"))
 {
   return.val = match.arg(return.val)
