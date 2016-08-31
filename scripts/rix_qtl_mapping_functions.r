@@ -646,23 +646,30 @@ A vector of the specified return values for all permutations
 "
   
 
-# Added marker_pos (GC)
-prob.plot <- function(pheno, pheno.col, probs, marker, marker_position=NULL) {
+prob.plot <- function(pheno, pheno.col, probs, marker, qtl) {
   ## Sort the pheno dataframe
   pheno = pheno[order(pheno[, pheno.col]),]
   
   ## Remove NAs from pheno data
   keep = rownames(pheno[!is.na(pheno[,pheno.col]),])
   if (length(keep) < 3) {
-	stop("Too many missing phenotype values!")
+    stop("Too many missing phenotype values!")
   }
   probmat = probs[keep, , marker]
   
+  ## set margins
+  old_mar = par("mar")
+  par(mar=c(5,8,4,4))
+  
+  ## Create heatmap
   grays = gray(seq(from=0, to=0.94, by=0.01))
   oranges = brewer.pal(9, 'Oranges')[3:7]
+  probmat[,8:1] -> probmat
   image(z=probmat, zlim=c(0, 1), col=rev(c(grays, oranges, '#FFFFFF')), axes=FALSE)
   #image(z=probmat, zlim=c(0, 1), col=rev(gray(seq(from=0, to=1, by=0.01))), axes=FALSE)
-  states <- colnames(probmat)
+  founder_id = c("A/J","C57BL/6J","129S1/SvImJ","NOD/ShiLtJ","NZO/HlLtJ","CAST/EiJ","PWK/PhJ","WSB/EiJ")
+  founder_id[8:1] -> founder_id2
+  states <- paste0(colnames(probmat)," (",founder_id2,")")
   nk <- ncol(probmat)
   axis(2, at=seq(from=0, to=1, len=nk), labels=states, las=1, tck=0)
   
@@ -672,16 +679,31 @@ prob.plot <- function(pheno, pheno.col, probs, marker, marker_position=NULL) {
   
   axis(3, at=ecdf(z)(pretty(z)), labels=pretty(z))
   mtext("z-score scale", side=3, at=0.5, line=2)
-  if (!is.null(marker_position)) {
-    mtext(paste0("Marker: ", marker," at ", marker_position), side=1, at=0.5, line=3)
-  } else {
-    mtext(paste0("Marker: ", marker), side=1, at=0.5, line=3)
+  
+  if(sum(qtl$lod$X[,"marker"] == marker) > 0){
+    
+    marker_pos = paste0(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"chromosome"],":",round(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"position.B38."],2),"Mb")
+    
+    lod = round(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"lod"],2)
+    
+  }else if(sum(qtl$lod$A[,"marker"] == marker) > 0){
+    
+    marker_pos = paste0(qtl$lod$A[qtl$lod$A[,"marker"] == marker,"chromosome"],":",round(qtl$lod$A[qtl$lod$A[,"marker"] == marker,"position.B38."],2))
+    
+    lod = round(qtl$lod$A[qtl$lod$A[,"marker"] == marker,"lod"],2)
+    
+  }else{
+    stop("Missing Marker ID")
   }
+  
+  mtext(paste0("Marker: ", marker," at Chr", marker_pos,"Mb; LOD score: ",lod), side=1, at=0.5, line=3)
+  
   xpos <- c(0, mean(y<mean(y)), 1)
   xtxt <- signif(c(min(y), mean(y), max(y)), 4)
   xtxt <- ifelse(abs(xtxt) < 1e-8, 0, xtxt)
   axis(1, at=xpos, labels=xtxt)
   box()
+  par(mar=old_mar)
 }
 attr(prob.plot, 'help') = "
 This function creates a probability plot for the mapping population.
@@ -691,8 +713,9 @@ pheno: The phenotype dataframe
 pheno.col: The column in the pheno dataframe to use as the phenotype
 probs: The 3D probability array
 marker: The ID of the marker to plot
-marker_position: optional; text containing the marker position (e.g. 'Chr1: 54.1Mb')
+qtl: A doqtl object; results from scanone()
 "
+
 
 coefplot_v2 = function(doqtl, chr = 1, start=NULL, end=NULL, stat.name = "LOD", remove.outliers=NULL, conf.int = FALSE, legend = TRUE, colors = "DO", sex, ...) {
 
