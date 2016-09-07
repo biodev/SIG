@@ -682,7 +682,7 @@ prob.plot <- function(pheno, pheno.col, probs, marker, qtl) {
   
   if(sum(qtl$lod$X[,"marker"] == marker) > 0){
     
-    marker_pos = paste0(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"chromosome"],":",round(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"position.B38."],2),"Mb")
+    marker_pos = paste0(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"chromosome"],":",round(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"position.B38."],2))
     
     lod = round(qtl$lod$X[qtl$lod$X[,"marker"] == marker,"lod"],2)
     
