@@ -2,7 +2,7 @@
 Workflows and code for the Systems Immunogenetics project
 
 ## Contents
-1. [Phenotypic Data Cleaning](#pheno)
+1. [Phenotypic Data Cleaning and Plotting](#pheno)
 2. [Expression Array Analysis](#expression)
 3. [QTL Mapping Analysis](#qtl)
 4. [Data Visualizations](#viz)
@@ -13,6 +13,8 @@ Workflows and code for the Systems Immunogenetics project
 
 [Flow Cytometry Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Cleaning.ipynb)
 
+[Flow Cytometry Data Plots @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Plotting.ipynb)
+
 #### Histology Data
 
 [Histology Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Histology_Data_Cleaning.ipynb)
@@ -21,8 +23,13 @@ Workflows and code for the Systems Immunogenetics project
 
 [qPCR Data Cleaning Workflow @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_qPCR_Data_Cleaning.ipynb)
 
-#### Buxco Data
+[qPCR Data Plots @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_qPCR_Data_Plotting.ipynb)
 
+#### Weight Data
+
+#### Clinical Scores
+
+#### Buxco Data
 
 
 ## <a name="expression"></a>Expression Array Analysis
@@ -34,7 +41,7 @@ Workflows and code for the Systems Immunogenetics project
 
 ## <a name="qtl"></a>QTL Mapping Analysis
 
-Coming soon ...
+[QTL Mapping Workflow @ Jupyter nbviewer](https://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_QTL_Mapping_Workflow.ipynb)
 
 
 ## <a name="viz"></a>Data Visualizations
@@ -42,7 +49,3 @@ Coming soon ...
 #### SIG Shiny Apps
 
 Coming soon ...
-
-#### Data Visualization R code
-
-[Flow Cytometry Data Plots @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_Flow_Data_Plotting.ipynb)
