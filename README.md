@@ -25,12 +25,6 @@ Workflows and code for the Systems Immunogenetics project
 
 [qPCR Data Plots @ Jupyter nbviewer](http://nbviewer.jupyter.org/github/biodev/SIG/blob/master/SIG_WNV_qPCR_Data_Plotting.ipynb)
 
-#### Weight Data
-
-#### Clinical Scores
-
-#### Buxco Data
-
 
 ## <a name="expression"></a>Expression Array Analysis
 
@@ -48,4 +42,4 @@ Workflows and code for the Systems Immunogenetics project
 
 #### SIG Shiny Apps
 
-Coming soon ...
+[http://www.systemsimmunogenetics.org/data_viz.html](http://www.systemsimmunogenetics.org/data_viz.html)
