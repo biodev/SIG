@@ -42,4 +42,4 @@ Workflows and code for the Systems Immunogenetics project
 
 #### SIG Shiny Apps
 
-[http://www.systemsimmunogenetics.org/data_viz.html](http://www.systemsimmunogenetics.org/data_viz.html)
+[http://www.systemsimmunogenetics.org/data_viz.html](http://138.68.239.29/data_viz.html)
